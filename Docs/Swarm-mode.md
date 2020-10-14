@@ -20,3 +20,28 @@ The init is extremely fast and what it has done is the following:
     - Encrypted by default on disk
     - No need for another key/value system to hold orchestration/secrets
     - Replicates logs amongst Managers via mutual TLS in 'control plane'
+
+# Commands
+
+## Get all the services
+
+```
+docker service ls
+```
+
+## List all the tasks of a service
+
+```
+docker service ps ID
+```
+
+## Update the service and change the replica amount.
+```
+docker service update ID --replicas 666
+```
+
+## Remove service
+
+```
+docker service rm NAME_OF_SERVICE
+```
