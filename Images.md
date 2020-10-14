@@ -56,3 +56,15 @@ docker image push mikevpeeren/nginx
 ```
 docker image push mikevpeeren/nginx:testing
 ```
+
+## Build image with tag in current directory
+
+```
+docker image build -t customnode .
+```
+
+## Removal of unused images
+
+```
+docker image prune -a
+```
