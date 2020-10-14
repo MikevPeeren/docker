@@ -36,3 +36,23 @@ docker history nginx
 ```
 docker inspect nginx
 ```
+
+## Creating a tag of an image
+
+```
+docker image tag nginx mikevpeeren/nginx
+```
+
+```
+docker image tag mikevpeeren/nginx mikevpeeren/nginx:testing
+```
+
+## Pushing a tagged image
+
+```
+docker image push mikevpeeren/nginx
+```
+
+```
+docker image push mikevpeeren/nginx:testing
+```
