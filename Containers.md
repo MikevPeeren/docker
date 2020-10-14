@@ -4,6 +4,18 @@ Most people compare a Container to a sort of Mini-VM.
 But in actuality they are more like a process.  
 They are limited to what resources they can access and they exit when the process has finished.  
 
+# Container Lifetime & Persistent Data
+
+Containers are usually immutable(unchanging) and ephemeral(disposable).  
+There is this thing called immutable infrastructure where we only re-deploy containers that never change.  
+This is the ideal scenario, but what about databases for example or unique data ?  
+Docker has given us feature for these kind of problems to ensure these seperation of concerns.  
+This problem of unique data is known in the industry as Persistent Data, docker has two solutions for this problem, namely Volumes and Bind Mounts.
+  
+<b>Volumes:</b> Configuration option to make a special location outside of container file system.
+  
+<b>Bind Mounts:</b> Link container path to host path.
+
 # Container Commands
 
 ## Get all the Containers that are currently running
