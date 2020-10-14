@@ -61,3 +61,17 @@ docker network create new_network
 ```
  docker container run --rm --net new_network centos curl google.com
 ```
+
+# Volume
+
+## Create a named volume with the -v command
+
+```
+docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mysql-db:/var/lib/mysql mysql
+```
+
+## Creating a Volume
+
+```
+docker volume create --help
+```
