@@ -59,3 +59,21 @@ docker service update ID --replicas 666
 ```
 docker service rm NAME_OF_SERVICE
 ```
+
+## Update image
+
+```
+docker service update --image myapp:1.2.1 <new_version>
+```
+
+## Updating Port
+
+```
+docker service update --publish-rm 8088 --publish-add 9090:80 web
+```
+
+## Replace all tasks
+
+```
+docker service update --force web
+```
