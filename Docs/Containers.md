@@ -57,6 +57,12 @@ docker network ls
 docker network create new_network
 ```
 
+## Create a Network with Overlay Driver
+
+```
+docker network create --driver overlay new_network
+```
+
 ## Connect a Container to a Network
 ```
 docker container run --rm --net new_network centos curl google.com
