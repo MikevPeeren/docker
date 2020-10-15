@@ -59,10 +59,10 @@ docker network create new_network
 
 ## Connect a Container to a Network
 ```
- docker container run --rm --net new_network centos curl google.com
+docker container run --rm --net new_network centos curl google.com
 ```
 
-# Volume
+# Volumes
 
 ## Create a named volume with the -v command
 
