@@ -35,7 +35,6 @@ This gets put infront of all the services and makes it so that all tasks are spr
 
 This is a stateless Load Balancer, and is a OSI Layer 3 (TCP) Load Balancer and thus not a Layer 4 (DNS) Load Balancer. This means you have to do additional steps in order to fix these limitations. It can be overcome with Nginx, HAProxy, LB Proxy or Docker Enterprise Edition which comes with built in L4 web proxy.
 
-
 # Commands
 
 ## Get all the services
