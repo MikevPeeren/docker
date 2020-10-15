@@ -33,3 +33,11 @@ Another benefit is if all you projects had a Dockerfile and a `docker-compose.ym
 `Docker Compose` can also build your custom images. It will build them with `docker-cpmpose up` if not found in the cache.  
 They can also be rebuild with `docker-compose build`.  
 And this is greater for complex builds that have allot of vars or build args
+
+# Commands
+
+## Copy Secret to be used
+
+```
+docker-compose exec psql cat /run/secrets/psql_user
+```

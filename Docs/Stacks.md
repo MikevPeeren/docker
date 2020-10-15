@@ -13,6 +13,12 @@ And Stacks manages all the objects for us including overlay network per stack.
 docker stack deploy -c stack.yml voteapp
 ```
 
+## Display all Stacks
+
+```
+docker stack ls
+```
+
 ## Display the services in Stack
 
 ```
