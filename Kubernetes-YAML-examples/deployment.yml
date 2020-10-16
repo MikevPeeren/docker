@@ -6,7 +6,7 @@ spec:
     selector:
         matchLabels:
             app: nginx # Determination for which Deployment the Pods will be apart of.
-    replicas: 2 # Create two Replicas
+    replicas: 2 # Create two Replica's
     template:
         metadata:
             labels:
