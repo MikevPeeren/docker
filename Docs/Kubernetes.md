@@ -38,3 +38,12 @@ Kubernetes is a popular container orchestrator and it has been released in 2015 
 - Control Plane: Set of containers that manage the cluster
   - Includes API server, scheduler, controlelr manager, etcd, and more
   - Sometimes called the "master"
+
+# Other Terms:
+
+- Pod: One or more containers running together on one Node
+  - Basic unit of deployment. Containers are always in Pods.
+- Controller: For creating/updating pods and other objects
+  - Many types of Controllers including Deployment, ReplicaSet, StatefulSet, DaemonSet, Job, CronJob, etc.
+- Service: Network endpoint to connect to a Pod
+- Namespace: Filtered group of object in cluster
