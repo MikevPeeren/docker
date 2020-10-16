@@ -1,0 +1,10 @@
+apiVersion: v1 # API Version of Pod resource kind
+kind: Pod # Pod Kind
+metadata:
+    name: nginx # The name we want to give to the Pod
+spec:
+    containers:
+        - name: nginx # The name we want to give to the Container
+          image: nginx:1.17.3 # Image we want to use
+          ports:
+              - containerPort: 80 # The port we want to use for the Container and how it can be accessed
