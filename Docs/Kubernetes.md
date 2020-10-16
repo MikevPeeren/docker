@@ -48,6 +48,39 @@ Kubernetes is a popular container orchestrator and it has been released in 2015 
 - Service: Network endpoint to connect to a Pod
 - Namespace: Filtered group of object in cluster
 
+# Imperative versus Declarative
+
+Imperative: Focus on HOW a program operates
+Declarative: Focus on WHAT a program should accomplish
+
+Example: I would like a cup of coffee
+Imperative: I boil water, scoop out 42 grams of medium fine grounds, poor over 700 grams of water, etc.
+Declarative: Barista, I would like a cup of coffee
+
+## Kubernetes Imperative:
+
+- Examples: kubectl run, kubectl create deployment, kubectl update
+  - We start with a state we know (no deployment exists)
+  - We ask kubectl run to create a deployment
+- Different commands are require to change that deployment
+- Different commands are required per object
+- Imperative is easier when you know the state
+- Imperative is easier to get started
+- Imperative is easier for humans at the CLI
+- Imperative is NOT easy to automate
+
+## Kubernetes Declarative:
+
+- Examples: kubectl apply -f my-resource.yaml
+  - We don't know the current state
+  - We only know what we want the end result to be (yaml contents)
+- Same command each time (tiny exception for delete)
+- Resources can be all in a file, or many files (apply a whole dir)
+- Requires understanding the YAML keys and values
+- More work than kubectl run for just starting a pob
+- The easiest way to automate
+- The eventual path to GitOps happiness
+
 # Commands
 
 ## Determine if Kube control is running
