@@ -114,3 +114,30 @@ kubectl get pods -w (different window)
 kubectl delete pods my-apache-65fd7bd7db-7q22f
 kubectl get pods
 ```
+
+## Exposing a port
+
+```
+kubectl expose deployment/httpenv --port 8888
+```
+
+## Exposing a port with NodePort so you can call the port with localhost
+
+```
+kubectl expose deployment/httpenv --port 8888 --name httpenv-np --type NodePort
+kubectl get service
+curl localhost:theaboveIPafterthe:
+```
+
+## Expose through Docker Desktop
+
+```
+kubectl expose deployment/httpenv --port 8888 --name httpenv-np --type LoadBalancer
+curl localhost:8888
+```
+
+## Deleting a Service & Deployment
+
+```
+kubectl delete service/httpenv-lb deployment/httpenv
+```
