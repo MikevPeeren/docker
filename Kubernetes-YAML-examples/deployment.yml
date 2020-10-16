@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # API Version of Pod resource kind
+kind: Deployment # Deployment Kind
+metadata:
+    name: nginx-deployment # The name we want to give to the Deployment
+spec:
+    selector:
+        matchLabels:
+            app: nginx # Determination for which Deployment the Pods will be apart of.
+    replicas: 2 # Create two Replicas
+    template:
+        metadata:
+            labels:
+                app: nginx # The name we are giving to the App
+        spec:
+            containers:
+                - name: nginx # The name we want to give to the Container
+                  image: nginx:1.14.2 # The image we want to use for this Container
+                  ports:
+                      - containerPort: 80 # The port we want to use for the Deployment and how it can be accessed
