@@ -26,3 +26,15 @@ Kubernetes is a popular container orchestrator and it has been released in 2015 
     - Picking solutions isn't 100% rational
     - Trendy, will benefit your career
     - CIO/CTO Checkbox
+
+# Basic Terms: System Parts
+
+- Kubernetes: The whole orchestration system
+  - K8s 'k-eights' or Kube for short
+- Kubectl: CLI to configure Kubernetes and manage apps
+  - Using "cube control" official pronunciation
+- Node: Single server in the Kubernetes Cluster
+- Kubelet: Kubernetes agent running on Nodes
+- Control Plane: Set of containers that manage the cluster
+  - Includes API server, scheduler, controlelr manager, etcd, and more
+  - Sometimes called the "master"
