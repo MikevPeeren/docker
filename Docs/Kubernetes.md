@@ -174,3 +174,29 @@ curl localhost:8888
 ```
 kubectl delete service/httpenv-lb deployment/httpenv
 ```
+
+# Declarative Commands
+
+## Get all the api resources available
+
+```
+kubectl api-resources
+```
+
+## Get all the keys/values for the services
+
+```
+kubectl explain services --recursive
+```
+
+## Get all sub keys & description of the spec.
+
+```
+kubectl explain services.spec
+```
+
+## Get the information about the type key
+
+```
+kubectl explain services.spec.type
+```
