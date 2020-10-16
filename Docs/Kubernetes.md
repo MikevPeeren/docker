@@ -6,47 +6,47 @@ Kubernetes is a popular container orchestrator and it has been released in 2015 
 
 ## Advantages of Swarm
 
-- Comes with Docker,single vendor container platform
-- Easiest orchestrator to deploy/manage yourself
-- Follows 80/20 rules, 20% of feature for 80% of use cases (seems to be the feel)
-- Runs anywhere Docker does:
-    - local, cloud, datacenter
-    - ARM, Windows, 32-bit
-- Secure by default
-- Easier to troubleshoot
+-   Comes with Docker,single vendor container platform
+-   Easiest orchestrator to deploy/manage yourself
+-   Follows 80/20 rules, 20% of feature for 80% of use cases (seems to be the feel)
+-   Runs anywhere Docker does:
+    -   local, cloud, datacenter
+    -   ARM, Windows, 32-bit
+-   Secure by default
+-   Easier to troubleshoot
 
 ## Advantanges of Kubernetes
 
-- Clouds will deploy/manager Kubernetes for you
-- Infrastructure vendors are making their own distributions
-- Widest adoption and community
-- Flexible: Covers widest set of use cases
-- "Kubernetes first" vendor support
-- "No one ever got fired for buying IBM"
-    - Picking solutions isn't 100% rational
-    - Trendy, will benefit your career
-    - CIO/CTO Checkbox
+-   Clouds will deploy/manager Kubernetes for you
+-   Infrastructure vendors are making their own distributions
+-   Widest adoption and community
+-   Flexible: Covers widest set of use cases
+-   "Kubernetes first" vendor support
+-   "No one ever got fired for buying IBM"
+    -   Picking solutions isn't 100% rational
+    -   Trendy, will benefit your career
+    -   CIO/CTO Checkbox
 
 # Basic Terms: System Parts
 
-- Kubernetes: The whole orchestration system
-  - K8s 'k-eights' or Kube for short
-- Kubectl: CLI to configure Kubernetes and manage apps
-  - Using "cube control" official pronunciation
-- Node: Single server in the Kubernetes Cluster
-- Kubelet: Kubernetes agent running on Nodes
-- Control Plane: Set of containers that manage the cluster
-  - Includes API server, scheduler, controlelr manager, etcd, and more
-  - Sometimes called the "master"
+-   Kubernetes: The whole orchestration system
+    -   K8s 'k-eights' or Kube for short
+-   Kubectl: CLI to configure Kubernetes and manage apps
+    -   Using "cube control" official pronunciation
+-   Node: Single server in the Kubernetes Cluster
+-   Kubelet: Kubernetes agent running on Nodes
+-   Control Plane: Set of containers that manage the cluster
+    -   Includes API server, scheduler, controlelr manager, etcd, and more
+    -   Sometimes called the "master"
 
 # Other Terms:
 
-- Pod: One or more containers running together on one Node
-  - Basic unit of deployment. Containers are always in Pods.
-- Controller: For creating/updating pods and other objects
-  - Many types of Controllers including Deployment, ReplicaSet, StatefulSet, DaemonSet, Job, CronJob, etc.
-- Service: Network endpoint to connect to a Pod
-- Namespace: Filtered group of object in cluster
+-   Pod: One or more containers running together on one Node
+    -   Basic unit of deployment. Containers are always in Pods.
+-   Controller: For creating/updating pods and other objects
+    -   Many types of Controllers including Deployment, ReplicaSet, StatefulSet, DaemonSet, Job, CronJob, etc.
+-   Service: Network endpoint to connect to a Pod
+-   Namespace: Filtered group of object in cluster
 
 # Imperative versus Declarative
 
@@ -59,29 +59,29 @@ Declarative: Barista, I would like a cup of coffee
 
 ## Kubernetes Imperative:
 
-- Examples: kubectl run, kubectl create deployment, kubectl update
-  - We start with a state we know (no deployment exists)
-  - We ask kubectl run to create a deployment
-- Different commands are require to change that deployment
-- Different commands are required per object
-- Imperative is easier when you know the state
-- Imperative is easier to get started
-- Imperative is easier for humans at the CLI
-- Imperative is NOT easy to automate
+-   Examples: kubectl run, kubectl create deployment, kubectl update
+    -   We start with a state we know (no deployment exists)
+    -   We ask kubectl run to create a deployment
+-   Different commands are require to change that deployment
+-   Different commands are required per object
+-   Imperative is easier when you know the state
+-   Imperative is easier to get started
+-   Imperative is easier for humans at the CLI
+-   Imperative is NOT easy to automate
 
 ## Kubernetes Declarative:
 
-- Examples: kubectl apply -f my-resource.yaml
-  - We don't know the current state
-  - We only know what we want the end result to be (yaml contents)
-- Same command each time (tiny exception for delete)
-- Resources can be all in a file, or many files (apply a whole dir)
-- Requires understanding the YAML keys and values
-- More work than kubectl run for just starting a pob
-- The easiest way to automate
-- The eventual path to GitOps happiness
+-   Examples: kubectl apply -f my-resource.yaml
+    -   We don't know the current state
+    -   We only know what we want the end result to be (yaml contents)
+-   Same command each time (tiny exception for delete)
+-   Resources can be all in a file, or many files (apply a whole dir)
+-   Requires understanding the YAML keys and values
+-   More work than kubectl run for just starting a pob
+-   The easiest way to automate
+-   The eventual path to GitOps happiness
 
-# Commands
+# Imperative Commands
 
 ## Determine if Kube control is running
 

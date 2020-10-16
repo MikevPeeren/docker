@@ -4,11 +4,11 @@ Docker Compose has been made in order to easily configure relationships between 
 
 It is comprised of 2 seperate but related things namely:
 
-- Yaml formatted file that describes our solution options for:
-    - containers
-    - networks
-    - volumes
-- A CLI tool `docker-compose` used for local dev/test automation with the YAML files
+-   Yaml formatted file that describes our solution options for:
+    -   containers
+    -   networks
+    -   volumes
+-   A CLI tool `docker-compose` used for local dev/test automation with the YAML files
 
 # Docker Compose YAML file
 
@@ -21,12 +21,14 @@ The default file name is docker-compose.yml but any file can be used with the co
 The CLI tool comes with Docker for Mac/Windows but is a seperate download for Linux.  
 It is not a production-grade tool but it is ideal for testing and local development.  
 The two most common commands are:
-- `docker-compose up` # setup volumes/networks and start all containers
-- `docker-compose down` # stop all containers and remove cont/vol/net
-  
+
+-   `docker-compose up` # setup volumes/networks and start all containers
+-   `docker-compose down` # stop all containers and remove cont/vol/net
+
 Another benefit is if all you projects had a Dockerfile and a `docker-compose.yml` then new developer onboarding would be as follows:
-- `git clone github.com/some/software`
-- `docker-compose up`
+
+-   `git clone github.com/some/software`
+-   `docker-compose up`
 
 # Images
 

@@ -2,7 +2,7 @@
 
 Most people compare a Container to a sort of Mini-VM.  
 But in actuality they are more like a process.  
-They are limited to what resources they can access and they exit when the process has finished.  
+They are limited to what resources they can access and they exit when the process has finished.
 
 # Container Lifetime & Persistent Data
 
@@ -11,9 +11,9 @@ There is this thing called immutable infrastructure where we only re-deploy cont
 This is the ideal scenario, but what about databases for example or unique data ?  
 Docker has given us feature for these kind of problems to ensure these seperation of concerns.  
 This problem of unique data is known in the industry as Persistent Data, docker has two solutions for this problem, namely Volumes and Bind Mounts.
-  
+
 <b>Volumes:</b> Configuration option to make a special location outside of container file system.
-  
+
 <b>Bind Mounts:</b> Link container path to host path.
 
 # Container Commands
@@ -25,6 +25,7 @@ docker container ls
 ```
 
 ## Get all the Containers ignoring running status
+
 ```
 docker container ls a
 ```
@@ -64,6 +65,7 @@ docker network create --driver overlay new_network
 ```
 
 ## Connect a Container to a Network
+
 ```
 docker container run --rm --net new_network centos curl google.com
 ```
